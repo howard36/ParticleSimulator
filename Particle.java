@@ -6,7 +6,7 @@ public class Particle{
     double px, py;
     double vx, vy;
     double r = 1;
-    double G = 200000; // a gravitational constant
+    double G = 100000; // a gravitational constant
     double fric = 0.02;
     double maxSpeed = 100000;
     double speed;
@@ -55,7 +55,7 @@ public class Particle{
     }
 
     public void display(Graphics g){
-        g.setColor(Color.getHSBColor((float)Math.pow(speed/maxSpeed, 0.29), 1, 1f));
+        g.setColor(Color.getHSBColor((float)Math.pow(speed/maxSpeed, 0.3), 1, 1f));
         // g.setColor(Color.YELLOW);
         g.fillOval((int)(px-r), (int)(py-r), (int)(2*r), (int)(2*r));
     }

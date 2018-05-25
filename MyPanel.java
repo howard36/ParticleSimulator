@@ -7,7 +7,7 @@ public class MyPanel extends Panel implements MouseMotionListener, MouseListener
     int numParticles = 10000;
     ArrayList<Particle> particles = new ArrayList<Particle>();
     double mx, my;
-    long period = 10;
+    long period = 20;
     long delay = 100;
     Timer timer = new Timer();
     BufferedImage osi;
@@ -55,21 +55,16 @@ public class MyPanel extends Panel implements MouseMotionListener, MouseListener
     }
 
     // MouseMotionListener
-    public void mouseDragged(MouseEvent e){
+    public void mouseDragged(MouseEvent e){}
+
+    public void mouseMoved(MouseEvent e){
         mx = e.getX();
         my = e.getY();
         repaint();
     }
-
-    public void mouseMoved(MouseEvent e){}
 
     // MouseListener
-    public void mousePressed(MouseEvent e){
-        mx = e.getX();
-        my = e.getY();
-        repaint();
-    }
-
+    public void mousePressed(MouseEvent e){}
     public void mouseClicked(MouseEvent e){}
     public void mouseEntered(MouseEvent e){}
     public void mouseExited(MouseEvent e){}
